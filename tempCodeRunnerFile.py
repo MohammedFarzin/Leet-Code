@@ -1,1 +1,1 @@
-solution.averageOfLevels(tree)
+Node
