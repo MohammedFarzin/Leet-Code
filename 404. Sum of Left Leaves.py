@@ -20,4 +20,4 @@ class Solution:
             
             if node.right:
                 queue.append((node.right, False))
-        return ans
+        return ans2

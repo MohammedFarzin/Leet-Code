@@ -6,6 +6,7 @@ def first_occurence_in_string(haystack: str, needle: str):
         k = i
         count = 0
         while j < len(needle):
+            print(j)
             if k < len(haystack):
                 if needle[j] == haystack[k]:
                     j += 1
