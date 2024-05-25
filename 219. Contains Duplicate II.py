@@ -1,10 +1,14 @@
-nums = [1,2,3,1] 
-k = 3
+nums = [0,1,2,3,4,0,0,7,8,9,10,11,12,0]
+k = 1
 
-for i in range(len(nums)-1):
-    for j in range(i+1, len(nums)):
-        if nums[i] == nums[j]:
-            if abs(i - j ) <= k:
-                print("True")
-            else:
-                print("False")
+
+def contain_duplicate(nums, k):
+    seen = {}
+
+    for i, j in enumerate(nums):
+        if j in seen and i - seen[j] <= k:
+            return True
+        seen[j] = i
+    return False
+        
+print(contain_duplicate(nums, k))
